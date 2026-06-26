@@ -1,0 +1,24 @@
+{
+  "dependencies": {
+    "express": "^5.1.0",
+    "firebase-admin": "^13.10.0"
+  },
+  "name": "main",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"No tests specified\" && exit 0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Hari-Krishna-9999/FULLSTACK.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Hari-Krishna-9999/FULLSTACK/issues"
+  },
+  "homepage": "https://github.com/Hari-Krishna-9999/FULLSTACK#readme"
+}

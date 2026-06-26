@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Favorite Movies</title>
+  <style>
+    body{
+      background:#111;
+      color:white;
+      font-family:Arial;
+      text-align:center;
+      padding:20px;
+    }
+
+    .movie-card{
+      background:#222;
+      margin:20px auto;
+      padding:15px;
+      border-radius:10px;
+      width:300px;
+    }
+
+    img{
+      width:150px;
+      border-radius:10px;
+    }
+
+    button{
+      padding:10px;
+      background:red;
+      color:white;
+      border:none;
+      border-radius:5px;
+      cursor:pointer;
+    }
+  </style>
+</head>
+<body>
+
+<h1>Favorite Movies</h1>
+
+<div id="favoritesList"></div>
+
+<script>
+  const favorites =
+    JSON.parse(localStorage.getItem("favorites")) || [];
+
+  const list =
+    document.getElementById("favoritesList");
+
+  if (favorites.length === 0) {
+    list.innerHTML = "<p>No favorite movies added.</p>";
+  } else {
+    favorites.forEach((movie, index) => {
+      list.innerHTML += `
+        <div class="movie-card">
+          <img src="${movie.Poster}" />
+          <h3>${movie.Title}</h3>
+          <p>${movie.Year}</p>
+          <button onclick="removeMovie(${index})">
+            Remove
+          </button>
+        </div>
+      `;
+    });
+  }
+
+  function removeMovie(index) {
+    favorites.splice(index, 1);
+
+    localStorage.setItem(
+      "favorites",
+      JSON.stringify(favorites)
+    );
+
+    location.reload();
+  }
+</script>
+
+</body>
+</html>

@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Movie Info App </title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(to right, #141e30, #243b55);
+      color: white;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+
+    header {
+      background-color: rgba(0, 0, 0, 0.3);
+      padding: 20px 40px;
+      text-align: center;
+      font-size: 28px;
+      font-weight: bold;
+      border-bottom: 1px solid #444;
+    }
+
+    main {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 30px;
+    }
+
+    h1 {
+      font-size: 48px;
+      margin-bottom: 15px;
+      color: #f9d423;
+    }
+
+    p {
+      font-size: 18px;
+      margin-bottom: 40px;
+      color: #e0e0e0;
+    }
+
+    .buttons {
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .btn {
+      padding: 14px 28px;
+      font-size: 16px;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: 0.3s;
+      font-weight: bold;
+      text-decoration: none;
+    }
+
+    .btn-signin {
+      background-color: #1d976c;
+      color: white;
+    }
+
+    .btn-signin:hover {
+      background-color: #14825b;
+    }
+
+    .btn-signup {
+      background-color: #ff512f;
+      color: white;
+    }
+
+    .btn-signup:hover {
+      background-color: #e1421e;
+    }
+
+    footer {
+      text-align: center;
+      padding: 15px;
+      font-size: 14px;
+      background-color: rgba(0, 0, 0, 0.2);
+      border-top: 1px solid #444;
+    }
+
+    @media (max-width: 500px) {
+      h1 {
+        font-size: 32px;
+      }
+      .btn {
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    🎬 Welcome to Movie Info App
+  </header>
+
+  <main>
+    <h1>Know More About Your Favorite Moives</h1>
+    <p>Sign in or create an account to explore top-rated movies curated just for you.</p>
+    <div class="buttons">
+      <a href="/signin" class="btn btn-signin">Sign In</a>
+      <a href="/signup" class="btn btn-signup">Sign Up</a>
+    </div>
+  </main>
+
+  <footer>
+    &copy; 2025 MovieInfo. All rights reserved.
+  </footer>
+
+</body>
+</html>
